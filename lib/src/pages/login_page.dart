@@ -61,12 +61,15 @@ class LoginPage extends StatelessWidget {
                 _buttonLogin(context),
                 Container(
                   margin: EdgeInsets.only(top: 30.0),
-                  child: Text(
-                    'Olvidaste tu contraseña',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 15.0),
+                  child: GestureDetector(
+                    onTap: ()=>Navigator.pushNamed(context, "forgot_password"),
+                    child: Text(
+                      'Olvidaste tu contraseña',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15.0),
+                    ),
                   ),
                 ),
                 Container(
@@ -74,16 +77,14 @@ class LoginPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      GestureDetector(
-                        onTap: ()=>Navigator.pushNamed(context, "forgot_password"),
-                        child: Text(
+                       Text(
                           'no tengo una cuenta? ',
                           style: TextStyle(
                               color: greyColors,
                               fontWeight: FontWeight.w500,
                               fontSize: 15.0),
                         ),
-                      ),
+                      
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text(
