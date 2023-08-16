@@ -63,7 +63,7 @@ class WelcomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.login),
+                Icon(Icons.login, size: 35.0,),
                 SizedBox(width: 10),
                 Text(
                   'Login',
@@ -92,7 +92,7 @@ class WelcomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.facebook_outlined),
+                Icon(Icons.facebook_outlined, size: 35,),
                 SizedBox(
                   width: 10,
                 ),
