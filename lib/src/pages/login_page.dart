@@ -146,7 +146,9 @@ Widget _buttonLogin(BuildContext context) {
     height: 50.0,
     margin: EdgeInsets.only(top: 25.0),
     child: ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, "tabs");
+      },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
