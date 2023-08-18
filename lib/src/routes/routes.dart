@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
-import 'package:food_mvvm/src/pages/forgot_password.dart';
-import 'package:food_mvvm/src/pages/login_page.dart';
-import 'package:food_mvvm/src/pages/sign_up.dart';
-import 'package:food_mvvm/src/pages/welcome_page.dart';
-import 'package:food_mvvm/src/tabs/tabs_page.dart';
+import 'package:food_mvvm/src/features/presentation/forgot_password/View/forgot_password.dart';
+import 'package:food_mvvm/src/features/presentation/login_page/View/login_page.dart';
+import 'package:food_mvvm/src/features/presentation/sign_up_page/View/sign_up.dart';
+import 'package:food_mvvm/src/features/presentation/tabs/tabs_page.dart';
+
+import '../features/presentation/welcome_page/View/welcome_page.dart';
 
 final routes =<String, WidgetBuilder> {
   'welcome' : (BuildContext context) => WelcomePage(),

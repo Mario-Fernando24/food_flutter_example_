@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_mvvm/src/colors/colors.dart';
 
-import '../widgets/back_button.dart';
+import '../../widgets/back_button.dart';
 
 class SignUPage extends StatelessWidget {
   const SignUPage({super.key});

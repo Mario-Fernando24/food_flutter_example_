@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_mvvm/src/tabs/explore_tab.dart';
-import 'package:food_mvvm/src/tabs/favorite_tab.dart';
-import 'package:food_mvvm/src/tabs/my_oder_tab.dart';
-import 'package:food_mvvm/src/tabs/profile_tab.dart';
+import 'package:food_mvvm/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
+import 'package:food_mvvm/src/features/presentation/tabs/favorite_tab/View/favorite_tab.dart';
+import 'package:food_mvvm/src/features/presentation/tabs/my_orders_tab/View/my_oder_tab.dart';
+import 'package:food_mvvm/src/features/presentation/tabs/profile_tab/View/profile_tab.dart';
 
 class TabsPage extends StatefulWidget {
   const TabsPage({super.key});
