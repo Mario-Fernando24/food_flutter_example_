@@ -18,23 +18,25 @@ class SignUPage extends StatelessWidget {
       body: Center(
         child: Container(
           padding: EdgeInsets.all(30.0),
-          child: Column(
-            children: [
-              Text(
-                'Crear cuenta ',
-                style: TextStyle(
-                    color: Theme.of(context).primaryColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30.0),
-              ),
-              _userInput(context),
-              _emailInput(context),
-              _phoneInput(context),
-              _dateOfBirthInput(context),
-              _passwordInput(context),
-              _buttonSign_up(context)
-              //_phoneInput(context)
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Text(
+                  'Crear cuenta ',
+                  style: TextStyle(
+                      color: Theme.of(context).primaryColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30.0),
+                ),
+                _userInput(context),
+                _emailInput(context),
+                _phoneInput(context),
+                _dateOfBirthInput(context),
+                _passwordInput(context),
+                _buttonSign_up(context)
+                //_phoneInput(context)
+              ],
+            ),
           ),
         ),
       ),

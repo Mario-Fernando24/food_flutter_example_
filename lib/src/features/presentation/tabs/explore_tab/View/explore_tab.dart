@@ -28,7 +28,7 @@ Widget _topBar(BuildContext context){
           border: Border.all(color: borderColors),
           borderRadius: BorderRadius.circular(20.0)
         ),
-        width: 310,
+        width: MediaQuery.of(context).size.width*0.75,
         child: Row(
           children: [
             Icon(Icons.search, size: 20.0, color: inputColors),
