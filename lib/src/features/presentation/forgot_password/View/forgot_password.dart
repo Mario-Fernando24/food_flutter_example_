@@ -88,7 +88,7 @@ Widget _buttonForgot(BuildContext context) {
           ),
         ),
         backgroundColor:
-            MaterialStateProperty.all<Color>(Theme.of(context).accentColor),
+            MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),
@@ -167,7 +167,7 @@ Widget _buttonDone(BuildContext context) {
           ),
         ),
         backgroundColor:
-            MaterialStateProperty.all<Color>(Theme.of(context).accentColor),
+            MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),

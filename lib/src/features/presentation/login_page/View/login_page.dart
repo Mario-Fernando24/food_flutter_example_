@@ -92,7 +92,7 @@ class LoginPage extends StatelessWidget {
                           child: Text(
                             'Registrarse',
                             style: TextStyle(
-                                color: Theme.of(context).accentColor,
+                                color: accentColor,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 15.0),
                           ),
@@ -167,7 +167,7 @@ Widget _buttonLogin(BuildContext context) {
           ),
         ),
         backgroundColor:
-            MaterialStateProperty.all<Color>(Theme.of(context).accentColor),
+            MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),

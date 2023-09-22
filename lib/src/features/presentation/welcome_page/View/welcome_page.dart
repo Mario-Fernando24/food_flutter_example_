@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:food_mvvm/src/colors/colors.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -78,7 +79,7 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
               backgroundColor: MaterialStateProperty.all<Color>(
-                  Theme.of(context).accentColor),
+                  accentColor),
               foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
             ),
           ),
@@ -109,7 +110,7 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
               backgroundColor: MaterialStateProperty.all<Color>(
-                  Theme.of(context).buttonColor),
+                  buttonColor),
               foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
             ),
           ),

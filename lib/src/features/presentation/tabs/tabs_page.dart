@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_mvvm/src/colors/colors.dart';
 import 'package:food_mvvm/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:food_mvvm/src/features/presentation/tabs/favorite_tab/View/favorite_tab.dart';
 import 'package:food_mvvm/src/features/presentation/tabs/my_orders_tab/View/my_oder_tab.dart';
@@ -40,7 +41,7 @@ class _TabsPageState extends State<TabsPage> {
   return BottomNavigationBar(
       iconSize: 30.0,
       //cuando esta seleccionado
-      selectedItemColor: Theme.of(context).accentColor,
+      selectedItemColor: accentColor,
       unselectedItemColor: Colors.grey,
       currentIndex: _selectItemIdex,
       onTap: _cambiarWidget,

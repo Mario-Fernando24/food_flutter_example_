@@ -143,7 +143,7 @@ Widget _buttonSign_up(BuildContext context) {
           ),
         ),
         backgroundColor:
-            MaterialStateProperty.all<Color>(Theme.of(context).accentColor),
+            MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),
