@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:food_mvvm/src/colors/colors.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -36,13 +37,7 @@ class WelcomePage extends StatelessWidget {
       children: [
         Container(
           padding: EdgeInsets.symmetric(horizontal: 50.0),
-          child: Text(
-            "ENTREGA DE COMIDA RÁPIDA A SU PUERTA",
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 45.0),
-          ),
+          child: headerText("ENTREGA DE COMIDA RÁPIDA A SU PUERTA", Colors.white,FontWeight.bold,45.0),
         ),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),

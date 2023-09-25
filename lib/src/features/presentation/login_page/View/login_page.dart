@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_mvvm/src/colors/colors.dart';
-import 'package:food_mvvm/src/features/presentation/widgets/back_button.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/back_button.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -46,11 +47,8 @@ class LoginPage extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                Text("Bienvenido",
-                    style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30)),
+                headerText('Bienvenido', Theme.of(context).primaryColor,
+                    FontWeight.bold, 30.0),
                 Text("inicia sesión en tu cuenta",
                     style: TextStyle(
                         color: greyColors,
@@ -62,7 +60,8 @@ class LoginPage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: 30.0),
                   child: GestureDetector(
-                    onTap: ()=>Navigator.pushNamed(context, "forgot_password"),
+                    onTap: () =>
+                        Navigator.pushNamed(context, "forgot_password"),
                     child: Text(
                       'Olvidaste tu contraseña',
                       style: TextStyle(
@@ -77,14 +76,13 @@ class LoginPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                       Text(
-                          'no tengo una cuenta? ',
-                          style: TextStyle(
-                              color: greyColors,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15.0),
-                        ),
-                      
+                      Text(
+                        'no tengo una cuenta? ',
+                        style: TextStyle(
+                            color: greyColors,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15.0),
+                      ),
                       GestureDetector(
                         onTap: () => Navigator.pushNamed(context, 'sign_up'),
                         child: Container(
@@ -147,6 +145,7 @@ Widget _buttonLogin(BuildContext context) {
     margin: EdgeInsets.only(top: 25.0),
     child: ElevatedButton(
       onPressed: () {
+        print("mario fernando");
         Navigator.pushNamed(context, "tabs");
       },
       child: Row(
@@ -166,8 +165,7 @@ Widget _buttonLogin(BuildContext context) {
             borderRadius: BorderRadius.circular(20.0),
           ),
         ),
-        backgroundColor:
-            MaterialStateProperty.all<Color>(accentColor),
+        backgroundColor: MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),

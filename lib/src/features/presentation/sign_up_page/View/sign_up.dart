@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_mvvm/src/colors/colors.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
-import '../../widgets/back_button.dart';
+import '../../commons_wiget/back_button.dart';
 
 class SignUPage extends StatelessWidget {
   const SignUPage({super.key});
@@ -21,13 +22,8 @@ class SignUPage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text(
-                  'Crear cuenta ',
-                  style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.0),
-                ),
+                headerText('Crear cuenta', Theme.of(context).primaryColor,
+                    FontWeight.bold, 30.0),
                 _userInput(context),
                 _emailInput(context),
                 _phoneInput(context),
@@ -144,8 +140,7 @@ Widget _buttonSign_up(BuildContext context) {
             borderRadius: BorderRadius.circular(20.0),
           ),
         ),
-        backgroundColor:
-            MaterialStateProperty.all<Color>(accentColor),
+        backgroundColor: MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),

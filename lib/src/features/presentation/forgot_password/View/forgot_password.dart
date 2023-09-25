@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_mvvm/src/colors/colors.dart';
-import 'package:food_mvvm/src/features/presentation/widgets/back_button.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/back_button.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});
@@ -19,13 +20,8 @@ class ForgotPasswordPage extends StatelessWidget {
         padding: EdgeInsets.all(30.0),
         child: Column(
           children: [
-            Text(
-              'no tengo una cuenta? ',
-              style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0),
-            ),
+            headerText("tengo una cuenta?", Theme.of(context).primaryColor,
+                FontWeight.bold, 30.0),
             Container(
               padding: EdgeInsets.all(10.0),
               child: Text(
@@ -87,8 +83,7 @@ Widget _buttonForgot(BuildContext context) {
             borderRadius: BorderRadius.circular(20.0),
           ),
         ),
-        backgroundColor:
-            MaterialStateProperty.all<Color>(accentColor),
+        backgroundColor: MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),
@@ -97,7 +92,7 @@ Widget _buttonForgot(BuildContext context) {
 
 void _showAlert(BuildContext context) {
   showDialog(
-    barrierDismissible: true,
+      barrierDismissible: true,
       context: context,
       builder: (_) {
         return AlertDialog(
@@ -107,15 +102,16 @@ void _showAlert(BuildContext context) {
             height: 400,
             child: Column(
               children: [
-                Image(image: AssetImage('assets/lock.png'),
-                width: 130,
-                height: 130,
+                Image(
+                  image: AssetImage('assets/lock.png'),
+                  width: 130,
+                  height: 130,
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                   child: Text(
                     'Tu contraseña ha sido restablecida',
-                     textAlign: TextAlign.center,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontWeight: FontWeight.bold,
@@ -123,11 +119,12 @@ void _showAlert(BuildContext context) {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                  margin:
+                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                   child: Text(
                     'en breve recibirá un correo electrónico con un código para configurar una nueva contraseña',
                     textAlign: TextAlign.center,
-                     style: TextStyle(
+                    style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontWeight: FontWeight.w400,
                         fontSize: 15.0),
@@ -141,14 +138,13 @@ void _showAlert(BuildContext context) {
       });
 }
 
-
 Widget _buttonDone(BuildContext context) {
   return Container(
     width: 350.0,
     height: 50.0,
     margin: EdgeInsets.only(top: 25.0),
     child: ElevatedButton(
-      onPressed: ()=> Navigator.pushNamed(context, 'login'),
+      onPressed: () => Navigator.pushNamed(context, 'login'),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -166,8 +162,7 @@ Widget _buttonDone(BuildContext context) {
             borderRadius: BorderRadius.circular(20.0),
           ),
         ),
-        backgroundColor:
-            MaterialStateProperty.all<Color>(accentColor),
+        backgroundColor: MaterialStateProperty.all<Color>(accentColor),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),
     ),
