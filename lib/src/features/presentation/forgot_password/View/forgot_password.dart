@@ -108,16 +108,10 @@ void _showAlert(BuildContext context) {
                   height: 130,
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                  child: Text(
-                    'Tu contraseña ha sido restablecida',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.0),
-                  ),
-                ),
+                    margin:
+                        EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                    child: headerText('Tu contraseña ha sido restablecida',
+                        Theme.of(context).primaryColor, FontWeight.bold, 20.0)),
                 Container(
                   margin:
                       EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
