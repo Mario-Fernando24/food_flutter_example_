@@ -32,7 +32,9 @@ class ExporeTabs extends StatelessWidget {
                 _populares(context,
                     "https://cdn.pixabay.com/photo/2020/01/20/00/08/pizza-4779230_1280.jpg"),
                 _populares(context,
-                    "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=500&q=60")
+                    "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=500&q=60"),
+                _headers(context, "Colecciones", "Show all"),
+                _sliderCollections()
               ],
             ),
           )
@@ -266,8 +268,8 @@ Widget _populares(BuildContext context, String photo) {
                               ),
                               backgroundColor:
                                   MaterialStateProperty.all<Color>(accentColor),
-                              foregroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.white),
+                              foregroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white),
                             ),
                             child: Text(
                               "Delivery",
@@ -283,5 +285,41 @@ Widget _populares(BuildContext context, String photo) {
         ),
       )
     ],
+  );
+}
+
+Widget _sliderCollections() {
+  return Container(
+    height: 200.0,
+    child: Swiper(
+        itemCount: 4,
+        layout: SwiperLayout.DEFAULT,
+        itemBuilder: (BuildContext context, int index) {
+          return ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                return _tarjetaCollections(context);
+              });
+        }),
+  );
+}
+
+Widget _tarjetaCollections(BuildContext context) {
+  return Container(
+    margin: EdgeInsets.all(10.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: Image(
+              width: 300,
+              height: 150,
+              fit: BoxFit.cover,
+              image: NetworkImage(
+                  "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=500&q=60"),),
+        ),
+      ],
+    ),
   );
 }
