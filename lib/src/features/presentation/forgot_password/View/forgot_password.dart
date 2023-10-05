@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_mvvm/src/colors/colors.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/alert_dialog.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/back_button.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
@@ -91,74 +92,14 @@ Widget _buttonForgot(BuildContext context) {
 }
 
 void _showAlert(BuildContext context) {
-  showDialog(
-      barrierDismissible: true,
-      context: context,
-      builder: (_) {
-        return AlertDialog(
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20.0))),
-          content: Container(
-            height: 400,
-            child: Column(
-              children: [
-                Image(
-                  image: AssetImage('assets/lock.png'),
-                  width: 130,
-                  height: 130,
-                ),
-                Container(
-                    margin:
-                        EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                    child: headerText('Tu contraseña ha sido restablecida',
-                        Theme.of(context).primaryColor, FontWeight.bold, 20.0)),
-                Container(
-                  margin:
-                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                  child: Text(
-                    'en breve recibirá un correo electrónico con un código para configurar una nueva contraseña',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 15.0),
-                  ),
-                ),
-                _buttonDone(context)
-              ],
-            ),
-          ),
-        );
-      });
+   showAlertDialog(context, 'assets/lock.png',
+   "Tu contraseña ha sido restablecida",
+   "en breve recibirá un correo electrónico con un código para configurar una nueva contraseña",
+   "Hecho",_goToLoginPage);
 }
 
-Widget _buttonDone(BuildContext context) {
-  return Container(
-    width: 350.0,
-    height: 50.0,
-    margin: EdgeInsets.only(top: 25.0),
-    child: ElevatedButton(
-      onPressed: () => Navigator.pushNamed(context, 'login'),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Hecho',
-            style: TextStyle(fontSize: 15.0),
-          ),
-          SizedBox(width: 10),
-          Icon(Icons.done_all),
-        ],
-      ),
-      style: ButtonStyle(
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-        ),
-        backgroundColor: MaterialStateProperty.all<Color>(accentColor),
-        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-      ),
-    ),
-  );
+void _goToLoginPage(BuildContext context){
+     Navigator.pushNamed(context, 'login');
 }
+
+
