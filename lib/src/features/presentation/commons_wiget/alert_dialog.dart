@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:food_mvvm/src/colors/colors.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
-void showAlertDialog(BuildContext context, String imagePath,
- String headerTitle, String headerSubTitle, String labelButton, Function doneButtonFunc) {
-  showDialog(
+  showAlertDialog(BuildContext context, String imagePath,
+ String headerTitle, String headerSubTitle, String labelButton, Function doneButtonFunc)async {
+  await  showDialog(
       barrierDismissible: true,
       context: context,
       builder: (_) {
@@ -41,7 +41,8 @@ void showAlertDialog(BuildContext context, String imagePath,
             ),
           ),
         );
-      });
+      }
+    );
 }
 
 Widget _buttonDone(BuildContext context, String labelButton, Function doneButtonFunc) {
