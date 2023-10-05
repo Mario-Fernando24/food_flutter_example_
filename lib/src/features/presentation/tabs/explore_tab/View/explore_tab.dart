@@ -53,7 +53,7 @@ Widget _topBar(BuildContext context) {
         decoration: BoxDecoration(
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(20.0)),
-        width: MediaQuery.of(context).size.width * 0.75,
+        width: MediaQuery.of(context).size.width * 0.70,
         child: Row(
           children: [
             Icon(Icons.search, size: 20.0, color: Colors.grey),
@@ -68,7 +68,7 @@ Widget _topBar(BuildContext context) {
         ),
       ),
       Container(
-        width: 45.0,
+        width: MediaQuery.of(context).size.width*0.15,
         height: 45.0,
         margin: EdgeInsets.only(left: 10.0, top: 10),
         decoration: BoxDecoration(
@@ -255,8 +255,8 @@ Widget _populares(BuildContext context, String photo) {
                       ),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 15.0),
-                        width: 110.0,
-                        height: 20.0,
+                        height: MediaQuery.of(context).size.height * 0.038,
+                        
                         child: ElevatedButton(
                             onPressed: () {},
                             style: ButtonStyle(
@@ -271,10 +271,7 @@ Widget _populares(BuildContext context, String photo) {
                               foregroundColor: MaterialStateProperty.all<Color>(
                                   Colors.white),
                             ),
-                            child: Text(
-                              "Delivery",
-                              style: TextStyle(fontSize: 11.0),
-                            )),
+                            child: const Text("Delivery", style: TextStyle(fontSize: 11.0))),
                       )
                     ],
                   )
