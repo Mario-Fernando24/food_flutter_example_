@@ -36,6 +36,7 @@ import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.da
                         fontSize: 15.0),
                   ),
                 ),
+                Spacer(),
                 _buttonDone(context, labelButton,doneButtonFunc)
               ],
             ),
