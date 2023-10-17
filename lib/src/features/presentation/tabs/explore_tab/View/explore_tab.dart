@@ -47,24 +47,27 @@ class ExporeTabs extends StatelessWidget {
 Widget _topBar(BuildContext context) {
   return Row(
     children: [
-      Container(
-        padding: EdgeInsets.all(10.0),
-        margin: EdgeInsets.only(left: 16, top: 10),
-        decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey),
-            borderRadius: BorderRadius.circular(20.0)),
-        width: MediaQuery.of(context).size.width * 0.70,
-        child: Row(
-          children: [
-            Icon(Icons.search, size: 20.0, color: Colors.grey),
-            Container(
-              margin: EdgeInsets.only(left: 5.0),
-              child: Text(
-                "Buscar",
-                style: TextStyle(color: Colors.grey, fontSize: 17.0),
-              ),
-            )
-          ],
+      GestureDetector(
+        onTap: ()=> Navigator.pushNamed(context, 'search'),
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          margin: EdgeInsets.only(left: 16, top: 10),
+          decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey),
+              borderRadius: BorderRadius.circular(20.0)),
+          width: MediaQuery.of(context).size.width * 0.70,
+          child: Row(
+            children: [
+              Icon(Icons.search, size: 20.0, color: Colors.grey),
+              Container(
+                margin: EdgeInsets.only(left: 5.0),
+                child: Text(
+                  "Buscar",
+                  style: TextStyle(color: Colors.grey, fontSize: 17.0),
+                ),
+              )
+            ],
+          ),
         ),
       ),
       Container(
