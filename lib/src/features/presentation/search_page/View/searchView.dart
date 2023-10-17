@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/card_vertical.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/header_double.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
@@ -31,7 +34,8 @@ class SearchPage extends StatelessWidget {
                           "Buscar", Colors.black, FontWeight.bold, 30.0)),
                   _searchInput(context),
                   SizedBox(height: 20.0),
-                  headerDoubleText("Búsqueda reciente", "Clear all",(){})
+                  headerDoubleText("Búsqueda reciente", "Clear all", () {}),
+                  _sliderRecentSearch()
                 ],
               ),
             )
@@ -60,3 +64,20 @@ Widget _searchInput(BuildContext context) {
     ),
   );
 }
+
+Widget _sliderRecentSearch() {
+  return Container(
+    height: 190.0,
+    child: Swiper(
+        itemCount: 4,
+        layout: SwiperLayout.DEFAULT,
+        itemBuilder: (BuildContext context, int index) {
+          return ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                return cardvertical(context, 160.0, 120.0, "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=500&q=60", "Andy & Cindy's Diner", "87 Botsford Circle Apt");
+              });
+        }),
+  );
+}
+
