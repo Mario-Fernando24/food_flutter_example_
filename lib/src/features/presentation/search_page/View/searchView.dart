@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/header_double.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
 
 class SearchPage extends StatelessWidget {
@@ -28,7 +29,9 @@ class SearchPage extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: headerText(
                           "Buscar", Colors.black, FontWeight.bold, 30.0)),
-                  _searchInput(context)
+                  _searchInput(context),
+                  SizedBox(height: 20.0),
+                  headerDoubleText("Búsqueda reciente", "Clear all",(){})
                 ],
               ),
             )
