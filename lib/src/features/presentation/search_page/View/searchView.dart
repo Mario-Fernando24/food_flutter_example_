@@ -4,6 +4,7 @@ import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/card_vertical.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/header_double.dart';
 import 'package:food_mvvm/src/features/presentation/commons_wiget/header_text.dart';
+import 'package:food_mvvm/src/features/presentation/commons_wiget/popular_card.dart';
 
 class SearchPage extends StatelessWidget {
   @override
@@ -33,9 +34,47 @@ class SearchPage extends StatelessWidget {
                       child: headerText(
                           "Buscar", Colors.black, FontWeight.bold, 30.0)),
                   _searchInput(context),
-                  SizedBox(height: 20.0),
+                  SizedBox(height: 10.0),
                   headerDoubleText("Búsqueda reciente", "Clear all", () {}),
-                  _sliderRecentSearch()
+                  _sliderRecentSearch(),
+                  headerDoubleText("Recomendados para ti", "", () { }),
+                  SizedBox(height: 10.0),
+                  popularesCard(
+                    context,
+                    0.0,
+                    0.0,
+                    0.0,
+                    10.0,
+                    "https://img.freepik.com/foto-gratis/hamburguesa-gourmet-parrilla-vegetales-frescos-papas-fritas-generada-ia_188544-38732.jpg",
+                    "Hamburguesa gourmet",
+                    "87 Botsford Circle Apt",
+                    "4.8",
+                    "(233 rating)",
+                    ""),
+                    popularesCard(
+                    context,
+                    0.0,
+                    0.0,
+                    0.0,
+                    10.0,
+                    "https://img.freepik.com/foto-gratis/hamburguesa-gourmet-parrilla-vegetales-frescos-papas-fritas-generada-ia_188544-38732.jpg",
+                    "Hamburguesa gourmet",
+                    "87 Botsford Circle Apt",
+                    "4.8",
+                    "(233 rating)",
+                    ""),
+                    popularesCard(
+                    context,
+                    0.0,
+                    0.0,
+                    0.0,
+                    10.0,
+                    "https://img.freepik.com/foto-gratis/hamburguesa-gourmet-parrilla-vegetales-frescos-papas-fritas-generada-ia_188544-38732.jpg",
+                    "Hamburguesa gourmet",
+                    "87 Botsford Circle Apt",
+                    "4.8",
+                    "(233 rating)",
+                    "")
                 ],
               ),
             )
