@@ -113,7 +113,9 @@ Widget _topBar(BuildContext context) {
             size: 30.0,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, 'filter_page');
+          },
         ),
       )
     ],

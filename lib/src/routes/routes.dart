@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:food_mvvm/src/features/presentation/filter_page/View/filter_page.dart';
 import 'package:food_mvvm/src/features/presentation/forgot_password/View/forgot_password.dart';
 import 'package:food_mvvm/src/features/presentation/login_page/View/login_page.dart';
 import 'package:food_mvvm/src/features/presentation/search_page/View/searchView.dart';
@@ -14,4 +15,6 @@ final routes =<String, WidgetBuilder> {
   'sign_up' :  (BuildContext context) => SignUPage(),
   'tabs' :  (BuildContext context) => TabsPage(),
   'search' :  (BuildContext context) => SearchPage(),
+  'filter_page' :  (BuildContext context) => FilterPage(),
+
 };
